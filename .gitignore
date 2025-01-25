@@ -1,6 +1,28 @@
+# Ignorar arquivos CSV e logs
 *.csv
 *.log
+
+# Ignorar arquivos compilados do Python
 *.pyc
-venv*
-.venv*
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignorar ambientes virtuais
+venv/
+.venv/
+
+# Ignorar configurações de IDEs
 .idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Ignorar arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar outros arquivos gerados por ferramentas comuns
+*.egg-info/
+dist/
+build/
