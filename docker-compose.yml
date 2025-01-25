@@ -1,0 +1,39 @@
+version: "3.9"
+services:
+  # Serviço da API FastAPI
+  fastapi_app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - app_data:/app/data
+    networks:
+      - mynetwork
+
+  # Serviço do Scheduler
+  scheduler:
+    build:
+      context: ./app
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+    command: ["python", "scheduler.py"]
+    volumes:
+      - app_data:/app/data
+    networks:
+      - mynetwork
+
+# Define volumes para persistência de dados
+volumes:
+  app_data:
+
+networks:
+  mynetwork:
+    driver: bridge
