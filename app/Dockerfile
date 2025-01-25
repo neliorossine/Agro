@@ -1,4 +1,3 @@
-# Etapa 1: Construir a API FastAPI
 FROM python:3.9-slim AS build
 
 WORKDIR /app
