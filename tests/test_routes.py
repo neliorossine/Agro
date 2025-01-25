@@ -1,16 +1,18 @@
 import unittest
 from unittest.mock import patch, mock_open
 from fastapi.testclient import TestClient
-from app.main import app
 from dotenv import load_dotenv
 import sys
 import os
 
 # Adiciona o diretório raiz do projeto ao PYTHONPATH
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'app')))
+os.environ['PYTHONPATH'] = os.path.abspath(os.path.join(os.path.dirname(__file__), '../app'))
+sys.path.append(os.environ['PYTHONPATH'])
 
 # Carregar as variáveis de ambiente do arquivo .env
 load_dotenv()
+
+from app.main import app
 
 
 class TestAPIRoutes(unittest.TestCase):
