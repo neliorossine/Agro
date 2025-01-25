@@ -14,14 +14,29 @@ git clone <url-do-repositorio>
 cd <diretorio-do-repositorio>
 ```
 
-### 2. Execute o Docker Compose:
+### 2. Criar e ativar o ambiente virtual:
+Se você preferir usar um ambiente virtual, pode criar um com venv. Aqui estão os passos:
+
+Para Linux/macOS:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Para Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 3. Execute o Docker Compose:
 Certifique-se de que você tem o Docker e o Docker Compose instalados.
 
 ```bash
 docker-compose up --build
 ```
 
-### 3. Acesse a API no navegador:
+### 4. Acesse a API no navegador:
 - **Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
 - **ReDoc**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
 
