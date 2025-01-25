@@ -1,7 +1,7 @@
 # Projeto API Clima
 
 ## Descrição
-Uma API desenvolvida em FastAPI que fornece dados climáticos de uma cidade utilizando a OpenWeather API e realiza previsões de necessidade de irrigação com base em condições climáticas. Também possui um agendador para tarefas periódicas.
+Uma API desenvolvida em FastAPI que fornece dados climáticos de uma cidade utilizando a OpenWeather API e WeatherAPI, realizando então previsões de necessidade de irrigação com base em condições climáticas. Também possui um agendador para tarefas periódicas.
 
 ---
 
