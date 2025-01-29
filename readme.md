@@ -3,12 +3,14 @@
 
 <p align="center"><img src="https://s3.amazonaws.com/1-jacto.com.br/files/banner_image_1680700798649_no-uniport-4530-america-do-sul-sai.webp"></p>
 
+<br><br>
 
 ## Descrição
 Uma API desenvolvida em FastAPI que fornece dados climáticos de uma cidade utilizando a OpenWeather API e WeatherAPI, realizando então previsões de necessidade de irrigação com base em condições climáticas. Também possui um agendador para tarefas periódicas.
 
 ---
 
+<br><br>
 
 ## Como rodar o projeto
 
@@ -17,6 +19,7 @@ Uma API desenvolvida em FastAPI que fornece dados climáticos de uma cidade util
 git clone <url-do-repositorio>
 cd <diretorio-do-repositorio>
 ```
+<br>
 
 ### 2. Criar e ativar o ambiente virtual:
 Se você preferir usar um ambiente virtual, pode criar um com venv. Aqui estão os passos:
@@ -33,6 +36,8 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
+<br>
+
 ### 3. Execute o Docker Compose:
 Certifique-se de que você tem o Docker e o Docker Compose instalados.
 
@@ -40,11 +45,15 @@ Certifique-se de que você tem o Docker e o Docker Compose instalados.
 docker-compose up --build
 ```
 
+<br>
+
 ### 4. Acesse a API no navegador:
 - **Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
 - **ReDoc**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
 
 ---
+
+<br><br>
 
 ## Endpoints Disponíveis
 
@@ -76,6 +85,8 @@ GET http://localhost:8000/weather?city=Curitiba&model_type=linear
 
 ##     
 
+<br>
+
 ### `/irrigation-forecast`
 Retorna a previsão de irrigação com base nas condições climáticas futuras de uma cidade, utilizando a WeatherAPI.
 
@@ -100,6 +111,8 @@ GET http://localhost:8000/irrigation-forecast?city=Curitiba
 ```
 
 ##   
+
+<br>
 
 ### `/irrigation-history`
 Retorna o histórico de irrigação realizado.
@@ -133,6 +146,8 @@ GET http://localhost:8000/irrigation-history
 ```
 ##   
 
+<br>
+
 ### `/optimal-irrigation-time`
 Esta rota fornece uma sugestão de horário ideal para irrigação, levando em consideração a temperatura atual da cidade. A recomendação é baseada na premissa de que a irrigação deve ser feita durante horários com temperaturas mais amenas para evitar a evaporação excessiva e garantir maior eficiência.
 
@@ -159,6 +174,8 @@ GET http://localhost:8000/optimal-irrigation-time?city=Curitiba
 
 ---
 
+<br><br>
+
 ## Agendador de Tarefas
 O projeto possui um componente de agendamento que realiza verificações periódicas e pode ser expandido para realizar a coleta de dados automática ou outras tarefas programadas.
 
@@ -167,6 +184,8 @@ O projeto possui um componente de agendamento que realiza verificações periód
 - Logs das tarefas estão disponíveis no container do scheduler.
 
 ---
+
+<br><br>
 
 ## Estrutura do Projeto
 
@@ -193,6 +212,8 @@ O projeto possui um componente de agendamento que realiza verificações periód
 
 ---
 
+<br><br>
+
 ## Tecnologias Utilizadas
 - **Linguagem**: Python 3.10
 - **Frameworks**: FastAPI, Schedule
@@ -201,6 +222,8 @@ O projeto possui um componente de agendamento que realiza verificações periód
 - **Containerização**: Docker e Docker Compose
 
 ---
+
+<br><br>
 
 ## Como usar o modelo de aprendizado de máquina
 O projeto implementa previsão de irrigação baseada em temperatura e umidade.
@@ -216,6 +239,7 @@ Os modelos podem ser expandidos para incluir mais parâmetros ou algoritmos mais
 pip install -r app/requirements.txt
 ```
 
+<br><br>
 
 ## Testes
 O projeto contém testes para as rotas da API, localizados em tests/test_routes.py. Para executar os testes, use:
@@ -226,6 +250,8 @@ Isso garantirá que as rotas estão funcionando corretamente.
 
 
 ---
+
+<br><br>
 
 ## Considerações Finais
 
