@@ -1,5 +1,9 @@
 # Projeto API Clima
 
+
+<p align="center"><img src="https://s3.amazonaws.com/1-jacto.com.br/files/banner_image_1680700798649_no-uniport-4530-america-do-sul-sai.webp"></p>
+
+
 ## Descrição
 Uma API desenvolvida em FastAPI que fornece dados climáticos de uma cidade utilizando a OpenWeather API e WeatherAPI, realizando então previsões de necessidade de irrigação com base em condições climáticas. Também possui um agendador para tarefas periódicas.
 
