@@ -132,14 +132,12 @@ O projeto possui um componente de agendamento que realiza verificações periód
 ```
 .
 ├── app/
-│   ├── main.py                 # Arquivo principal da API
-│   ├── irrigation.py           # Todas as rotas de irrigação
+│   ├── main.py                 # Arquivo principal da API contendo as rotas
 │   ├── scheduler.py            # Agendamento de previsões
 │   ├── utils.py                # Funções utilitárias
 │   ├── requirements.txt        # Dependências do Python
 │   ├── Dockerfile              # Configuração para criar a imagem Docker
-│   ├── models
-│   │   ├── ml_model.py          # Modelos de Machine Learning
+│   ├── ml_model.py          # Modelos de Machine Learning
 │   ├── data
 │   │   ├── irrigation_log.csv   # Histórico de irrigação
 ├── tests/
