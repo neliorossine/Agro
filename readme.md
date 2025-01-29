@@ -137,7 +137,7 @@ Esta rota fornece uma sugestão de horário ideal para irrigação, levando em c
 
 #### Exemplo de Requisição:
 ```bash
-GET GET http://localhost:8000/optimal-irrigation-time?city=Curitiba
+GET http://localhost:8000/optimal-irrigation-time?city=Curitiba
 ```
 
 #### Exemplo de Resposta:
@@ -207,7 +207,7 @@ O projeto implementa previsão de irrigação baseada em temperatura e umidade.
 
 Os modelos podem ser expandidos para incluir mais parâmetros ou algoritmos mais sofisticados.
 
-#### Como instalar dependências adicionais para ML (caso necessário):
+#### Como instalar dependências adicionais (caso necessário):
 ```bash
 pip install -r app/requirements.txt
 ```
@@ -229,6 +229,12 @@ Este projeto é modular e preparado para futuras expansões, como:
 - **Previsões climáticas a longo prazo**.
 - **Otimização de colheitas** com base em condições climáticas.
 - **Integração com bancos de dados escaláveis** como MongoDB.
+- **Utilização de cache** como o Redis
+- **Utilização de filas de mensageria** como o Rabbitmq
+- **Utilização de logs e monitoria** como o Graylog, Grafana, New Relic
+- **Armazenamento em Cloud** aproveitamento de Kubernetes
+- **etc**
+
 
 Contribuições e sugestões são bem-vindas!
 
