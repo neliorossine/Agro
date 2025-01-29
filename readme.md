@@ -69,6 +69,9 @@ GET http://localhost:8000/weather?city=Curitiba&model_type=linear
 }
 ```
 
+
+##     
+
 ### `/irrigation-forecast`
 Retorna a previsão de irrigação com base nas condições climáticas futuras de uma cidade, utilizando a WeatherAPI.
 
@@ -92,6 +95,7 @@ GET http://localhost:8000/irrigation-forecast?city=Curitiba
 }
 ```
 
+##   
 
 ### `/irrigation-history`
 Retorna o histórico de irrigação realizado.
@@ -123,6 +127,7 @@ GET http://localhost:8000/irrigation-history
     }
 ]
 ```
+##   
 
 ### `/optimal-irrigation-time`
 Esta rota fornece uma sugestão de horário ideal para irrigação, levando em consideração a temperatura atual da cidade. A recomendação é baseada na premissa de que a irrigação deve ser feita durante horários com temperaturas mais amenas para evitar a evaporação excessiva e garantir maior eficiência.
