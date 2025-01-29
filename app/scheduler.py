@@ -60,7 +60,7 @@ def job():
     """
     city = "Curitiba"
     model_type = "linear"
-    soil_type = "sandy"  # Adicionando o tipo de solo (isso pode vir de uma variável ou fonte externa)
+    soil_type = "sandy"
 
     try:
         weather_data = get_weather_data(city)
@@ -108,7 +108,7 @@ def run_schedule():
             time.sleep(1)
         except Exception as e:
             logger.error(f"Erro no agendador: {str(e)}")
-            time.sleep(10)  # Pausa para evitar loops frenéticos em caso de erro
+            time.sleep(10)
 
 # Iniciar o agendador
 if __name__ == "__main__":
