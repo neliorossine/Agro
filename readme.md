@@ -133,16 +133,20 @@ O projeto possui um componente de agendamento que realiza verificações periód
 .
 ├── app/
 │   ├── main.py                 # Arquivo principal da API
-│   ├── ml_model.py             # Lógica de aprendizado de máquina
-│   ├── scheduler.py            # Sistema de agendamento de tarefas
+│   ├── irrigation.py           # Todas as rotas de irrigação
+│   ├── scheduler.py            # Agendamento de previsões
 │   ├── utils.py                # Funções utilitárias
-│   ├── scheduler_data.csv      # Log do agendamento
+│   ├── requirements.txt        # Dependências do Python
+│   ├── Dockerfile              # Configuração para criar a imagem Docker
+│   ├── models
+│   │   ├── ml_model.py          # Modelos de Machine Learning
+│   ├── data
+│   │   ├── irrigation_log.csv   # Histórico de irrigação
 ├── tests/
 │   ├── test_routes.py          # Testes das rotas da API
 ├── .env                        # Variáveis de ambiente
-├── Dockerfile                  # Configuração para criar a imagem Docker
+
 ├── docker-compose.yml          # Orquestração dos containers
-├── requirements.txt            # Dependências do Python
 └── README.md                   # Documentação do projeto
 ```
 
