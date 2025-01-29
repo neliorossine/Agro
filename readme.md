@@ -176,9 +176,9 @@ O projeto possui um componente de agendamento que realiza verificações periód
 │   ├── requirements.txt        # Dependências do Python
 │   ├── Dockerfile              # Configuração para criar a imagem Docker
 │   ├── models
-│   │   ├── ml_model.py          # Modelos de Machine Learning
+│   │   ├── ml_model.py         # Modelos de Machine Learning
 │   ├── data
-│   │   ├── irrigation_log.csv   # Histórico de irrigação
+│   │   ├── irrigation_log.csv  # Histórico de irrigação
 ├── tests/
 │   ├── test_routes.py          # Testes das rotas da API
 ├── .env                        # Variáveis de ambiente
