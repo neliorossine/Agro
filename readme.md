@@ -232,7 +232,7 @@ Este projeto é modular e preparado para futuras expansões, como:
 - **Utilização de cache** como o Redis
 - **Utilização de filas de mensageria** como o Rabbitmq
 - **Utilização de logs e monitoria** como o Graylog, Grafana, New Relic
-- **Armazenamento em Cloud** aproveitamento de Kubernetes
+- **Armazenamento em Cloud** para aproveitamento de Kubernetes, por exemplo
 - **etc**
 
 
