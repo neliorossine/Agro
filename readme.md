@@ -63,7 +63,9 @@ GET http://localhost:8000/weather?city=Curitiba&model_type=linear
     "temperature": 18.44,
     "humidity": 59,
     "precipitation": 0,
-    "predicted_irrigation_liters": 10.5
+    "soil_type": "sandy",
+    "predicted_irrigation_liters": 10.5,
+    "message": "Previsão de irrigação baseada em dados climáticos."
 }
 ```
 
@@ -84,7 +86,9 @@ GET http://localhost:8000/irrigation-forecast?city=Curitiba
     "city": "Curitiba",
     "temperature_forecast": [18.5, 31.2, 25.0],
     "humidity_forecast": [60, 58, 55],
-    "predicted_irrigation_liters": 15.0
+    "predicted_irrigation_liters": 15.0,
+    "soil_type": "sandy",
+    "message": "Previsão de irrigação futura com base em dados climáticos."
 }
 ```
 
@@ -106,12 +110,16 @@ GET http://localhost:8000/irrigation-history
     {
         "city": "Curitiba",
         "date": "2025-01-23",
-        "irrigation_liters": 10.5
+        "irrigation_liters": 10.5,
+        "soil_type": "sandy",
+        "message": "Histórico de irrigação."
     },
     {
         "city": "Curitiba",
         "date": "2025-01-22",
-        "irrigation_liters": 12.0
+        "irrigation_liters": 12.0,
+        "soil_type": "sandy",
+        "message": "Histórico de irrigação."
     }
 ]
 ```
