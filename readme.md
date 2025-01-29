@@ -116,6 +116,30 @@ GET http://localhost:8000/irrigation-history
 ]
 ```
 
+### `/optimal-irrigation-time`
+Esta rota fornece uma sugestão de horário ideal para irrigação, levando em consideração a temperatura atual da cidade. A recomendação é baseada na premissa de que a irrigação deve ser feita durante horários com temperaturas mais amenas para evitar a evaporação excessiva e garantir maior eficiência.
+
+#### Parâmetros de Consulta:
+- `city` (string, obrigatório): Nome da cidade.
+
+#### Exemplo de Requisição:
+```bash
+GET GET http://localhost:8000/optimal-irrigation-time?city=Curitiba
+```
+
+#### Exemplo de Resposta:
+```json
+{
+    "city": "Curitiba",
+    "temperature": 18.44,
+    "humidity": 59,
+    "precipitation": 0,
+    "soil_type": "sandy",
+    "suggested_irrigation_time": "morning",
+    "message": "Horário ideal para irrigação sugerido com base na temperatura"
+}
+```
+
 ---
 
 ## Agendador de Tarefas
