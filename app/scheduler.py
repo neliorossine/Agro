@@ -1,5 +1,5 @@
 from utils import get_weather_data, get_weather_forecast
-from ml_model import predict_irrigation
+from models.ml_model import predict_irrigation
 import schedule
 import time
 from datetime import datetime
@@ -39,13 +39,17 @@ def adjust_schedule_based_on_weather():
     city = "Curitiba"
     try:
         weather_forecast = get_weather_forecast(city)
-        upcoming_temp = weather_forecast[0]['temp_c']
+        upcoming_precipitation = weather_forecast[0].get('rain', {}).get('1h', 0)
 
-        # Ajuste da frequência com base na temperatura
-        return 30 if upcoming_temp > 30 else 60
+        # Ajuste da frequência com base na precipitação
+        if upcoming_precipitation > 0:
+            return 3600  # Aguarda uma hora se houver previsão de chuva
+        else:
+            return 30  # Frequência mais curta sem previsão de chuva
     except Exception as e:
         logger.error(f"Erro ao ajustar a frequência: {str(e)}")
         return 60  # Frequência padrão em caso de erro
+
 
 def job():
     """
@@ -56,12 +60,16 @@ def job():
     """
     city = "Curitiba"
     model_type = "linear"
+    soil_type = "sandy"  # Adicionando o tipo de solo (isso pode vir de uma variável ou fonte externa)
+
     try:
         weather_data = get_weather_data(city)
         temperature = weather_data["main"]["temp"]
         humidity = weather_data["main"]["humidity"]
         precipitation = weather_data.get("rain", {}).get("1h", 0)
-        irrigation = predict_irrigation(temperature, humidity, precipitation, model_type)
+
+        # Passando o 'soil_type' para a função de previsão
+        irrigation = predict_irrigation(temperature, humidity, precipitation, model_type, soil_type)
 
         data = [
             datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -76,6 +84,7 @@ def job():
         logger.info(f"Dados salvos: {data}")
     except Exception as e:
         logger.error(f"Erro ao executar o job: {str(e)}")
+
 
 def run_schedule():
     """
